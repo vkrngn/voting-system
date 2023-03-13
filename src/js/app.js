@@ -209,21 +209,21 @@ App = {
   },
 
   // ------------- adding candidate code -------------
-  addCandidate: function(){
+addCandidate: function(){
     $("#loader").hide();
-    var name=$('#name').val();
-    var age = $('#age').val();
-    var party = $('#party').val();
-    var qualification = $('#qualification').val();
+    var name=$('#candidate_name').val();
+    var age = $('#candidate_branch').val();
+    var party = $('#candidate_age').val();
+    var qualification = $('#candidate_batch').val();
     
     App.contracts.Contest.deployed().then(function(instance){
       return instance.addContestant(name,party,age,qualification);
     }).then(function(result){
       $("#loader").show();
-      $('#name').val('');
-      $('#age').val('');
-      $('#party').val('');
-      $('#qualification').val('');
+      $('#candidate_name').val('');
+      $('#candidate_branch').val('');
+      $('#candidate_age').val('');
+      $('#candidate_batch').val('');
     }).catch(function(err){
       console.error(err);
     })

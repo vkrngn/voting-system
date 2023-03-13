@@ -23,8 +23,8 @@ var rand=Math.floor((Math.random() * 10000) + 54);
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'election.blockchain@gmail.com',
-      pass: 'ajkprvy7'
+      user: 'vkrngn8806@gmail.com',
+      pass: '16329854'
     }
   });
 
@@ -57,7 +57,7 @@ router.post('/registerdata',function(req,res){
           if (age>=18)
           {
             var mailOptions = {
-                from: 'sharayuingale19@gmail.com',
+                from: 'vkrngn@gmail.com',
                 to: email,
                 subject : "Please confirm your Email account",
                 text : "Hello, Your otp is "+rand	
